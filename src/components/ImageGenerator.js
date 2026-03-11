@@ -17,7 +17,7 @@ const ImageGenerator = () => {
   return (
     <div className="tab-content">
       <h2>Generate Image</h2>
-      <div className='alert'>Not working due to AI Assistant not supporting creating images.</div>
+      <div className='alert-box'>Not working due to AI Assistant not supporting creating images.</div>
       <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder='Enter prompt for image' />
       <button disabled onClick={generateImage} >Generate Image</button>
 

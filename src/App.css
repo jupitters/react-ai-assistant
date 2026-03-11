@@ -77,3 +77,15 @@ img {
   border: 1px solid #ccc; /* Optional: adds a border around the text container */
   margin-bottom: 20px; /* Spacing below the text container */
 }
+
+.alert-box{
+  margin: 10px auto;
+  padding: 12px 16px;
+  background-color: #ff4d4f;
+  color: white;
+  border-radius: 6px;
+  width: 50%;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2)
+}
