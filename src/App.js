@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import ImageGenerator from './components/ImageGenerator';
 
 function App() {
   const [activeTab, setActiveTab] = useState('chat');
@@ -18,7 +19,7 @@ function App() {
       <div>
         {activeTab === 'chat' && <h2>Chat</h2>}
         {activeTab === 'image-generator' && <h2>Recipe enerator</h2>}
-        {activeTab === 'recipe-generator' && <h2>Image Generator</h2>}
+        {activeTab === 'recipe-generator' && <ImageGenerator />}
       </div> 
     </div>
   );
