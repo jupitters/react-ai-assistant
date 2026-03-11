@@ -11,6 +11,9 @@ const RecipeGenerator = () => {
       const response = await fetch(`http://localhost:8080/recipe-creator?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`)
       const data = await response.text()
       setRecipe(data)
+      setIngredients('')
+      setCuisine('')
+      setDietaryRestrictions('')
     } catch(e){
       alert(e)
     }
