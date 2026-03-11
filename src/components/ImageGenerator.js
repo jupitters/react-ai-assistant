@@ -4,13 +4,22 @@ const ImageGenerator = () => {
     const [prompt, setPrompt] = useState('')
     const [imageUrls, setImageUrls] = useState([])
 
-    
+    const generateImage = async () => {
+
+    }
 
   return (
     <div className="tab-content">
       <h2>Generate Image</h2>
       <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder='Enter prompt for image' />
-      <button onClick={} >Generate Image</button>
+      <button onClick={generateImage} >Generate Image</button>
+
+      <div className='image-grid'>
+        {imageUrls.map((url, index) => {
+          <img key={index} src={url} alt={`Generated ${index}`} />
+        })}
+      </div>
+
     </div>
   )
 }
