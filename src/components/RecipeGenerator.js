@@ -7,7 +7,9 @@ const RecipeGenerator = () => {
   const [recipe, setRecipe] = useState('')
 
   const handleGenerateRecipe = async (ingredients, cuisine, dietaryRestrictions) => {
-    
+    const response = await fetch(`http://localhost:8080/generate-recipe?ingredients=${ingredients}&cuisine=${cuisine}&dietaryRestrictions=${dietaryRestrictions}`)
+    const data = response.text()
+    setRecipe(data)
   }
 
   return (
