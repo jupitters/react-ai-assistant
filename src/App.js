@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import ImageGenerator from './components/ImageGenerator';
 import ChatComponent from './components/ChatComponent';
+import RecipeGenerator from './components/RecipeGenerator';
 
 function App() {
   const [activeTab, setActiveTab] = useState('chat');
@@ -19,7 +20,7 @@ function App() {
 
       <div>
         {activeTab === 'chat' && <ChatComponent />}
-        {activeTab === 'image-generator' && <h2>Recipe enerator</h2>}
+        {activeTab === 'image-generator' && <RecipeGenerator />}
         {activeTab === 'recipe-generator' && <ImageGenerator />}
       </div> 
     </div>
