@@ -23,7 +23,7 @@ const RecipeGenerator = () => {
       <input type='text' value={cuisine} onChange={(e) => setCuisine(e.target.value)} placeholder='Enter cuisine' />
       <input type='text' value={dietaryRestrictions} onChange={(e) => setDietaryRestrictions} placeholder='Enter dietary restrictions' />
       <button onClick={handleGenerateRecipe}>Generate Recipe</button>
-      <div>
+      <div className='output'>
         <pre className='recipe-text'>{recipe}</pre>
       </div>
     </div>
