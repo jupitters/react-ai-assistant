@@ -4,8 +4,14 @@ const ImageGenerator = () => {
     const [prompt, setPrompt] = useState('')
     const [imageUrls, setImageUrls] = useState([])
 
-    const generateImage = async () => {
-
+    const generateImage = async (prompt) => {
+      try {
+        const response = await fetch(`http://localhost:8080/generate-image?prompt=${prompt}`)
+        const urls = await response.json()
+        setImageUrls(urls)
+      } catch (error) {
+        alert(error)
+      }
     }
 
   return (
