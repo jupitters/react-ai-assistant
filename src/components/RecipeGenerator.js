@@ -7,7 +7,12 @@ const RecipeGenerator = () => {
   const [recipe, setRecipe] = useState('')
 
   return (
-    <div>RecipeGenerator</div>
+    <div>
+      <h2>Recipe Generator</h2>
+      <input type='text' value={ingredients} onChange={(e) => setIngredients(e.target.value)} placeholder='Enter ingredients(comma separated)' />
+      <input type='text' value={cuisine} onChange={(e) => setCuisine(e.target.value)} placeholder='Enter cuisine' />
+      <input type='text' value={dietaryRestrictions} onChange={(e) => setDietaryRestrictions} placeholder='Enter dietary restrictions' />
+    </div>
   )
 }
 
