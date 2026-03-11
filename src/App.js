@@ -1,12 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('chat');
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab)
+  }
+
   return (
     <div className="App">
-      <button>Chat</button>
-      <button>Recipe Generator</button>
-      <button>Image Generator</button>
+      <button onClick={() => handleTabChange('chat')}>Chat</button>
+      <button onClick={() => handleTabChange('recipe-generator')}>Recipe Generator</button>
+      <button onClick={() => handleTabChange('image-generator')}>Image Generator</button>
+
+      <div>
+        {activeTab === 'chat' && <h2>Chat</h2>}
+        {activeTab === 'image-generator' && <h2>Recipe enerator</h2>}
+        {activeTab === 'recipe-generator' && <h2>Image Generator</h2>}
+      </div> 
     </div>
   );
 }
