@@ -5,7 +5,13 @@ const ChatComponent = () => {
   const [response, setResponse] = useState('')
 
   const handleAskAi = async (prompt) => {
-    
+    try{
+      const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`)
+      const data = response.json()
+      setResponse(data)
+    } catch(e){
+      alert(e)
+    }
   }
 
   return (
