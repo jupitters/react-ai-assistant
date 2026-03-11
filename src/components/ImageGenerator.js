@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const ImageGenerator = () => {
+    const [prompt, setPrompt] = useState('')
+
   return (
     <div>ImageGenerator</div>
   )
