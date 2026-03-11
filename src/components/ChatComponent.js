@@ -9,6 +9,7 @@ const ChatComponent = () => {
       const response = await fetch(`http://localhost:8080/ask-ai?prompt=${prompt}`)
       const data = await response.text()
       setResponse(data)
+      setPrompt('')
     } catch(e){
       alert(e)
     }
