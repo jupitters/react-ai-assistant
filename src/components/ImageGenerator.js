@@ -15,12 +15,12 @@ const ImageGenerator = () => {
       <button onClick={generateImage} >Generate Image</button>
 
       <div className='image-grid'>
-        {imageUrls.map((url, index) => {
+        {imageUrls.map((url, index) => (
           <img key={index} src={url} alt={`Generated ${index}`} />
-        })}
-        {[...Array(4 - imageUrls.length)].map((_, index) => {
+        ))}
+        {[...Array(4 - imageUrls.length)].map((_, index) => (
           <div key={index + imageUrls.length} className='empty-image-slot'> </div>
-        })}
+        ))}
       </div>
 
     </div>
