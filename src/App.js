@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <button className={activeTab === 'chat' ? 'active' : ''} onClick={() => handleTabChange('chat')}>Chat</button>
+      <button className={activeTab === 'chat' ? 'active' : ''} onClick={() => handleTabChange('chat')}>Ask AI</button>
       <button className={activeTab === 'chat' ? 'recipe-generator' : ''} onClick={() => handleTabChange('recipe-generator')}>Recipe Generator</button>
       <button className={activeTab === 'chat' ? 'image-generator' : ''} onClick={() => handleTabChange('image-generator')}>Image Generator</button>
 
