@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import ImageGenerator from './components/ImageGenerator';
+import ChatComponent from './components/ChatComponent';
 
 function App() {
   const [activeTab, setActiveTab] = useState('chat');
@@ -17,7 +18,7 @@ function App() {
       <button className={activeTab === 'chat' ? 'image-generator' : ''} onClick={() => handleTabChange('image-generator')}>Image Generator</button>
 
       <div>
-        {activeTab === 'chat' && <h2>Chat</h2>}
+        {activeTab === 'chat' && <ChatComponent />}
         {activeTab === 'image-generator' && <h2>Recipe enerator</h2>}
         {activeTab === 'recipe-generator' && <ImageGenerator />}
       </div> 
