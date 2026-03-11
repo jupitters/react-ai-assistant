@@ -19,8 +19,8 @@ function App() {
 
       <div>
         {activeTab === 'chat' && <ChatComponent />}
-        {activeTab === 'image-generator' && <RecipeGenerator />}
-        {activeTab === 'recipe-generator' && <ImageGenerator />}
+        {activeTab === 'recipe-generator' && <RecipeGenerator />}
+        {activeTab === 'image-generator' && <ImageGenerator />}
       </div> 
     </div>
   );
